@@ -1,8 +1,8 @@
-import App, { Container } from "next/app";
-import React from "react";
-import { ApolloProvider } from "react-apollo";
+import App, { Container } from 'next/app';
+import React from 'react';
+import { ApolloProvider } from 'react-apollo';
 
-import withApolloClient from "../lib/hoc/with-apollo-client";
+import withApolloClient from '../lib/hoc/with-apollo-client';
 
 class MyApp extends App {
   render() {

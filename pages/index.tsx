@@ -1,8 +1,8 @@
-import React from "react";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
+import React from 'react';
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
 
-import { Query as TSQuery } from "../lib/graphql/types";
+import { Query as TSQuery } from '../lib/graphql/types';
 
 const SAY_HELLO = gql`
   query HelloQuery {
@@ -20,7 +20,7 @@ export default () => (
       data = {} || {}
     }: {
       loading: any;
-      data: TSQuery["sayHello"];
+      data: TSQuery['sayHello'];
     }) => {
       let d: any = data;
       if (data === null) {

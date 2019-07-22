@@ -1,0 +1,13 @@
+query HelloQuery {
+	sayHello {
+		title
+		author
+	}
+}
+
+query GetBookShelf {
+	getAllBooks {
+		title
+		author
+	}
+}

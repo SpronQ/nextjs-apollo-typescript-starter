@@ -4,6 +4,7 @@
 
 - Small, builtin GraphQL server
 - Generates TypeScript types from GraphQL schema
+- Generates React Components from GraphQL queries
 - Easier development overview in terminal: each process gets its split window
 
 
@@ -37,7 +38,8 @@
 yarn dev
 ```
 
-🔥 To quit press `ctrl-a k`
+🔥 To quit, press `ctrl-a k`
+🔄 To restart a process, select window and press `ctrl-a r`
 
 
 ### Linting using ESLint , and fixing linting errors
