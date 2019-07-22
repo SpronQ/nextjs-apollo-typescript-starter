@@ -9,7 +9,9 @@
     "dev": "stmux -M -e ERROR -m beep,system -- [ [ \"next\" .. \"yarn generate-graphql-types -w\" ] ] && pkill -f next",
     "generate-graphql-types": "wait-on tcp:3000 && yarn graphql-codegen -c graphql-code-gen.yml",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint lib pages",
+    "lint-fix": "eslint -c .eslintrc.js lib pages --fix"
   },
   "dependencies": {
     "apollo-boost": "^0.4.3",

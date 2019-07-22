@@ -31,12 +31,28 @@
 
 ## Development
 
+### Running the toolchain
+
 ```
 yarn dev
 ```
 
 🔥 To quit press `ctrl-a k`
 
+
+### Linting using ESLint , and fixing linting errors
+
+To see linting errors on command line do the following: 
+
+```
+yarn lint
+```
+
+Some ESLint errors are fixable programmatically, to do so please use:
+
+```
+yarn lint-fix
+```
 
 
 
