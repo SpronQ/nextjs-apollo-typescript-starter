@@ -1,0 +1,6 @@
+lib/graphql
+node_modules
+package-lock.json
+.next
+yarn-error.log
+
