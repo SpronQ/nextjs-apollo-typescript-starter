@@ -12,6 +12,7 @@
 - [Node.js 10.x](https://nodejs.org/en/download/)
 - [Yarn](https://yarnpkg.com)
 
+
 ## Used packages
 
 - [Next.js 9](https://github.com/zeit/next.js/tree/v9.0.2)
@@ -21,16 +22,20 @@
 - [GraphQL Code Generator](https://graphql-code-generator.com/docs/getting-started/)
 - [stmux](https://github.com/rse/stmux)
 
+
 ## Installation
 
 - Clone this repository.
 - `yarn install`
+
 
 ## Development
 
 ```
 yarn dev
 ```
+
+🔥 To quit press `ctrl-a k`
 
 
 
