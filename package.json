@@ -1,7 +1,7 @@
 {
-	"name": "nextjs-9-starter",
+	"name": "nextjs-apollo-typescript-starter",
 	"version": "1.0.0",
-	"description": "Next.js 9 starter",
+	"description": "Next.js 9 with Apollo GraphQL and TypeScript",
 	"main": "index.js",
 	"author": "jpwesselink",
 	"license": "MIT",
@@ -27,6 +27,7 @@
 		"react-dom": "^16.8.6"
 	},
 	"devDependencies": {
+		"@graphql-codegen/add": "^1.4.0",
 		"@graphql-codegen/cli": "^1.4.0",
 		"@graphql-codegen/typescript-operations": "^1.4.0",
 		"@graphql-codegen/typescript-react-apollo": "^1.4.0",

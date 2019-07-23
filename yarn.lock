@@ -791,6 +791,14 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@graphql-codegen/add@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/add/-/add-1.4.0.tgz#3466799c8a3d9abc80678c41df6cbe0d30baee9b"
+  integrity sha512-asfLAKofiVnfAb3I0gfGRdrzqCuPIRUc37u+KavW1zTpdM2WyFS5fvzt3YBFWt7ZMAWQqFK8JuIKZouW8jIqzg==
+  dependencies:
+    "@graphql-codegen/plugin-helpers" "1.4.0"
+    tslib "1.10.0"
+
 "@graphql-codegen/cli@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.4.0.tgz#c9ba4986c375ce798c4e2c9385b5dc4c8e0f7446"

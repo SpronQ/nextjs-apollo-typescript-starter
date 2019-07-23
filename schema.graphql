@@ -6,4 +6,5 @@ type Book {
 type Query {
 	sayHello: Book
 	sayGoodbye: String
+	getAllBooks: [Book]!
 }

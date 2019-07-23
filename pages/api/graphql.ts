@@ -1,19 +1,40 @@
-import { ApolloServer } from "apollo-server-micro";
-import { importSchema } from "graphql-import";
+import { ApolloServer } from 'apollo-server-micro';
+import { importSchema } from 'graphql-import';
 
-const typeDefs = importSchema("./schema.graphql");
-const resolvers = {
-  Query: {
-    sayHello() {
-      return { title: "hey you", author: "author" };
+import { Resolvers } from '../../lib/graphql/resolvers-types';
+
+const typeDefs = importSchema('./schema.graphql');
+
+const resolvers: Resolvers = {
+  Book: {
+    title: () => {
+      return 'my mbook';
     },
-    sayGoodbye() {
-      return "Byebye World!";
+    author: () => {
+      return '123';
+    }
+  },
+
+  Query: {
+    sayHello: () => {
+      return { title: 'asdasd', author: 'Sjaak' };
+    },
+    sayGoodbye: () => {
+      return 'Byebye World!';
+    },
+    getAllBooks: () => {
+      return [
+        { title: 'My book', author: 'JP' },
+        { title: 'My second book', author: 'JP' }
+      ];
     }
   }
 };
 
-const apolloServer = new ApolloServer({ typeDefs, resolvers });
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers
+});
 
 export const config = {
   api: {
@@ -21,4 +42,4 @@ export const config = {
   }
 };
 
-export default apolloServer.createHandler({ path: "/api/graphql" });
+export default apolloServer.createHandler({ path: '/api/graphql' });

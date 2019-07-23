@@ -5,57 +5,60 @@ module.exports = {
     node: true,
     jest: true
   },
-  extends: ["airbnb", "prettier", "prettier/react"],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module'
   },
-  plugins: ["react", "prettier"],
+  plugins: ['react', 'prettier'],
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
       }
     }
   },
   rules: {
-    "import/prefer-default-export": "warn",
-    "import/order": [
-      "error",
-      { "newlines-between": "always-and-inside-groups" },
+    'import/prefer-default-export': 'warn',
+    'import/order': [
+      'error',
+      { 'newlines-between': 'always-and-inside-groups' },
       {
         groups: [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index'
         ]
       }
     ],
-    "jsx-a11y/anchor-is-valid": [
-      "error",
+    'jsx-a11y/anchor-is-valid': [
+      'error',
       {
-        components: ["Link"],
-        specialLink: ["hrefLeft", "hrefRight"],
-        aspects: ["invalidHref", "preferButton"]
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton']
       }
     ],
-    "react/prop-types": 0,
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx", "tsx"] }],
-    "prettier/prettier": [
-      "error",
+    'react/prop-types': 0,
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] }
+    ],
+    'prettier/prettier': [
+      'error',
       {
-        singleQuote: false,
+        singleQuote: true,
         bracketSpacing: true,
         jsxBracketSameLine: true
       }
@@ -63,9 +66,9 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
-      parser: "@typescript-eslint/parser",
-      plugins: ["@typescript-eslint"],
+      files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
 
       parserOptions: {
         ecmaFeatures: { jsx: true }
@@ -73,16 +76,16 @@ module.exports = {
 
       rules: {
         // Prevent TypeScript-specific constructs from being erroneously flagged as unused
-        "@typescript-eslint/no-unused-vars": "error",
+        '@typescript-eslint/no-unused-vars': 'error',
         // Require PascalCased class and interface names
-        "@typescript-eslint/class-name-casing": "error",
+        '@typescript-eslint/class-name-casing': 'error',
         // Require a specific member delimiter style for interfaces and type literals
         // Default Semicolon style
-        "@typescript-eslint/member-delimiter-style": "error",
+        // '@typescript-eslint/member-delimiter-style': 'error',
         // Require a consistent member declaration order
-        "@typescript-eslint/member-ordering": "error",
+        '@typescript-eslint/member-ordering': 'error',
         // Require consistent spacing around type annotations
-        "@typescript-eslint/type-annotation-spacing": "error"
+        '@typescript-eslint/type-annotation-spacing': 'error'
       }
     }
   ]
