@@ -30,6 +30,11 @@
 - `yarn install`
 
 
+## Additional installation
+
+For instructions how to add `material-ui`, please take a look at the guide in [`./examples/material-ui/README/md`](./examples/material-ui/README/md)
+
+
 ## Development
 
 ### Running the toolchain
