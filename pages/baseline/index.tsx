@@ -19,7 +19,7 @@ import {
   OrderedList,
   UnorderedList,
   ListItem
-} from '../../lib/baseline/Typography';
+} from '../../lib/components/Typography';
 import {
   Section,
   SingleMeasure,
@@ -29,7 +29,7 @@ import {
   ColumnQuatro,
   ColumnMain,
   ColumnSidebar
-} from '../../lib/baseline/Layouts';
+} from '../../lib/components/Layouts';
 
 const codeExample = `body {
   color: blue;

@@ -2,6 +2,8 @@
 
 ## Features
 
+- Both Material-UI and styled-components
+- Baseline and progressive modular-scale included
 - Small, builtin GraphQL server
 - Generates TypeScript types from GraphQL schema
 - Generates React Components from GraphQL queries
@@ -16,7 +18,9 @@
 
 ## Used packages
 
-- [Next.js 9](https://github.com/zeit/next.js/tree/v9.0.2)
+- [Next.js 9.x](https://github.com/zeit/next.js/tree/v9.0.2)
+- [Material-UI](https://material-ui.com/)
+- [styled-components](https://www.styled-components.com/)
 - [Apollo](https://www.apollographql.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ESLint](https://eslint.org/)
@@ -28,11 +32,6 @@
 
 - Clone this repository.
 - `yarn install`
-
-
-## Additional installation
-
-For instructions how to add `material-ui`, please take a look at the guide in [`./examples/material-ui/README/md`](./examples/material-ui/README/md)
 
 
 ## Development

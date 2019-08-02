@@ -58,7 +58,11 @@ function Link(props: CustomLinkProps) {
   }
 
   return (
-    <MuiLink component={NextComposed} className={className} ref={innerRef}>
+    <MuiLink
+      href={href}
+      component={NextComposed}
+      className={className}
+      ref={innerRef}>
       {children}
     </MuiLink>
   );
