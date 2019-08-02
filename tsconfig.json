@@ -32,6 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     "lib/hoc/init-apollo.js",
-    "lib/hoc/with-apollo-client.jsx"
+    "lib/hoc/with-apollo-client.jsx",
+    "lib/baseline/mixins/font-size.js"
   ]
 }
