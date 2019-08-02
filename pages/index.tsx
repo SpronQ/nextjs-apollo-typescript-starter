@@ -1,38 +1,19 @@
 import React from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
-
-import { Query as TSQuery } from '../lib/graphql/types';
-
-const SAY_HELLO = gql`
-  query HelloQuery {
-    sayHello {
-      title
-      author
-    }
-  }
-`;
+import Link from 'next/link';
 
 export default () => (
-  <Query query={SAY_HELLO}>
-    {({
-      loading,
-      data = {} || {}
-    }: {
-      loading: any;
-      data: TSQuery['sayHello'];
-    }) => {
-      let d: any = data;
-      if (data === null) {
-        d = {};
-      }
-
-      return (
-        <>
-          {d.title}
-          <pre>{JSON.stringify({ loading, d }, null, 4)}</pre>
-        </>
-      );
-    }}
-  </Query>
+  <ul>
+    <li>
+      <Link href="/apollo">Apollo</Link>
+    </li>
+    <li>
+      <Link href="/material-ui">material-ui</Link>
+    </li>
+    <li>
+      <Link href="/styled-components">styled-components</Link>
+    </li>
+    <li>
+      <Link href="/baseline">styled-components + responsive modular scale</Link>
+    </li>
+  </ul>
 );

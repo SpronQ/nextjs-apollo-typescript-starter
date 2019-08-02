@@ -1,12 +1,18 @@
 import App, { Container } from 'next/app';
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import {
+  ThemeProvider as SCThemeProvider,
+  createGlobalStyle
+} from 'styled-components';
+import { ThemeProvider as MUIThemeProvider } from '@material-ui/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import createBaseline from '../lib/baseline';
 
 import withApolloClient from '../lib/hoc/with-apollo-client';
-import theme from '../lib/styled-components-theme';
+import scTheme from '../lib/styled-components-theme';
+import muiTheme from '../lib/mui-theme';
 
 const sb = createBaseline({
   defaults: {
@@ -47,16 +53,27 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class MyApp extends App {
+  componentDidMount() {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }
+
   render() {
     const { Component, pageProps, apolloClient } = this.props;
     return (
       <Container>
         <GlobalStyle />
-        <ThemeProvider theme={{ ...theme, sb }}>
-          <ApolloProvider client={apolloClient}>
-            <Component {...pageProps} />
-          </ApolloProvider>
-        </ThemeProvider>
+        <ApolloProvider client={apolloClient}>
+          <SCThemeProvider theme={{ ...scTheme, sb }}>
+            <MUIThemeProvider theme={muiTheme}>
+              <CssBaseline />
+              <Component {...pageProps} />
+            </MUIThemeProvider>
+          </SCThemeProvider>
+        </ApolloProvider>
       </Container>
     );
   }
